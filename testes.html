@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Navegação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #ff8cb4; /* Cor de fundo rosa levemente mais escuro */
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s ease; /* Adicionando transição de cor */
+        }
+
+        nav a:hover {
+            color: #333; /* Mudando a cor do texto ao passar o mouse para preto */
+        }
+
+        .section {
+            height: 500px;
+            padding: 20px;
+        }
+
+        /* Adicionando regras para tornar a página responsiva */
+        @media only screen and (max-width: 600px) {
+            nav a {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        /* Estilo do botão */
+        .agendar-consulta-btn {
+            display: block;
+            margin-top: 20px; /* Espaço extra acima do botão */
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .agendar-consulta-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" onclick="scrollToSection('atendimentos')">Atendimentos</a>
+        <a href="#" onclick="scrollToSection('sobre-nos')">Sobre Nós</a>
+        <a href="#" onclick="scrollToSection('consultas')">Consultas</a>
+        <a href="#" onclick="scrollToSection('atendimento-presencial')">Atendimento Presencial</a>
+        <a href="#" onclick="scrollToSection('atendimento-online')">Atendimento Online</a>
+        <a href="#" onclick="scrollToSection('contato')">Contato</a>
+    </nav>
+
+    <!-- Seção: Atendimentos -->
+    <div id="atendimentos" class="section" style="background-color: #ffe4e1;">
+        <h2>Atendimentos</h2>
+        <p>Oferecemos atendimentos psicológicos para ajudar você a enfrentar desafios e promover o bem-estar mental.</p>
+        <p>Entre em contato conosco para agendar uma consulta.</p>
+        <button class="agendar-consulta-btn" onclick="scrollToSection('contato')">Agendar Consulta</button>
+    </div>
+
+    <!-- Seção: Sobre Nós -->
+    <div id="sobre-nos" class="section" style="background-color: #ffb6c1;">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma equipe de psicólogos dedicados a fornecer suporte emocional e psicológico.</p>
+        <p>Nossa missão é ajudar você a alcançar uma vida mais equilibrada e saudável.</p>
+    </div>
+
+    <!-- Seção: Consultas -->
+    <div id="consultas" class="section" style="background-color: #ff99b5;">
+        <h2>Consultas</h2>
+        <p>Oferecemos consultas individuais e em grupo para abordar uma variedade de questões psicológicas.</p>
+        <p>Nossos psicólogos estão aqui para ajudar no seu processo de autoconhecimento e crescimento pessoal.</p>
+    </div>
+
+    <!-- Seção: Atendimento Presencial -->
+    <div id="atendimento-presencial" class="section" style="background-color: #ff8cb4;">
+        <h2>Atendimento Presencial</h2>
+        <p>Nosso atendimento presencial é realizado em um ambiente acolhedor e confortável.</p>
+        <p>Estamos localizados em um local de fácil acesso, proporcionando conveniência para nossos clientes.</p>
+    </div>
+
+    <!-- Seção: Atendimento Online -->
+    <div id="atendimento-online" class="section" style="background-color: #ff73a5;">
+        <h2>Atendimento Online</h2>
+        <p>Oferecemos a opção de atendimento psicológico online para aqueles que preferem a conveniência da terapia à distância.</p>
+        <p>Nossos serviços online mantêm a mesma qualidade e compromisso com a confidencialidade.</p>
+    </div>
+
+    <!-- Seção: Contato -->
+    <div id="contato" class="section" style="background-color: #ff5c87;">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para agendar uma consulta ou obter mais informações sobre nossos serviços.</p>
+        <p>Telefone: (123) 456-7890</p>
+        <p>Email: contato@psicologia.com</p>
+    </div>
+
+    <!-- Seus scripts JavaScript aqui -->
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
